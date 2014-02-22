@@ -1,6 +1,0 @@
-Bartering
-=========
-
-Bartering App
-
-Test
