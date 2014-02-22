@@ -1,4 +1,0 @@
-Bartering
-=========
-
-Bartering App
