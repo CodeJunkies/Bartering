@@ -7,4 +7,6 @@ angular.module('barterApp')
       'AngularJS',
       'Karma'
     ];
-  });
+  })
+  .controller('HeaderCtrl', function ($scope) {})
+  .controller('FooterCtrl', function ($scope) {});
