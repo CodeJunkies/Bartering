@@ -10,12 +10,12 @@ angular.module('barterApp')
         headers: {
           'X-Parse-Application-Id': '',
           'X-Parse-REST-API-Key': '',
-          'Content-Type: application/json': '',
+          'Content-Type': 'application/json',
           'Accept': 'application/json;odata=verbose'
         }
       };
 
-      $http.post('url', config)
+      $http.post('url', data, config)
         .success(function(data) {
             deferred.resolve(data);
         }).error(function(data) {
