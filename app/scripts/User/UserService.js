@@ -18,12 +18,11 @@ angular.module('barterApp')
       $http.post('url', data, config)
         .success(function(data) {
             deferred.resolve(data);
-        }).error(function(data) {
+          })
+        .error(function(data) {
             deferred.reject(data);
-        });
+          });
     }
 
-    return {
-      createUser: createUser
-    }
+    return {createUser: createUser};
   });

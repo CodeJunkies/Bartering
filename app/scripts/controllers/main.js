@@ -7,11 +7,12 @@ angular.module('barterApp')
       'AngularJS',
       'Karma'
     ];
+
+    // Use getListings function of ListingService to get the promise and when it's resolved update the listings
     ListingService.getListings().then(function(data) {
       $scope.listings = data.results;
-      console.log($scope.listings);
     });
-//    console.log($scope.listings);
+
   })
-  .controller('HeaderCtrl', function ($scope) {})
-  .controller('FooterCtrl', function ($scope) {});
+  .controller('HeaderCtrl', function () {})
+  .controller('FooterCtrl', function () {});
