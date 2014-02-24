@@ -4,7 +4,8 @@ angular.module('barterApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'AuthModule'
 ])
   .config(function ($routeProvider) {
     $routeProvider
