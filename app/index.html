@@ -57,11 +57,20 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/User/UserService.js"></script>
-        <script src="scripts/Listing/ListingService.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/User/UserConstants.js"></script>
+    <script src="scripts/User/Service/UserService.js"></script>
+    <script src="scripts/Listing/ListingService.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+
+    <script src="scripts/AuthModule/AuthModule.js"></script>
+    <script src="scripts/AuthModule/constants/AuthConstants.js"></script>
+    <script src="scripts/AuthModule/Service/AuthService.js"></script>
+    <script src="scripts/AuthModule/Service/AuthTokenManager.js"></script>
+
+
+
+    <!-- endbuild -->
 </body>
 </html>
