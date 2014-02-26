@@ -8,6 +8,4 @@ angular.module('barterApp')
       $scope.listings = data.results;
     });
 
-  })
-  .controller('HeaderCtrl', function () {})
-  .controller('FooterCtrl', function () {});
+  });
