@@ -14,7 +14,7 @@ angular.module('barterApp')
       
         // Return the promise to the controller
         return promise;
-      }
+      },
       
       getChat: function(id) {
 
