@@ -5,14 +5,14 @@
     <li><a ng-href="#">Contact</a></li>
   </ul>
   <h3 class="text-muted">Bartering App</h3>
-  <div>
+  <div ng-controller="ListingCtrl">
     <ul>
       <li ng-repeat="listing in listings">
         <h4>{{listing.title}}</h4>
       </li>
     </ul>
   </div>
-  <div>
+  <div ng-controller="ChatCtrl">
     <ul>
       <li ng-repeat="chat in chats">
         <h4>{{chat.userAId}} - {{chat.userBId}}</h4>
