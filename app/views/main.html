@@ -12,6 +12,18 @@
       </li>
     </ul>
   </div>
+  <div>
+    <ul>
+      <li ng-repeat="chat in chats">
+        <h4>{{chat.userAId}} - {{chat.userBId}}</h4>
+        <ul>
+          <li ng-repeat="message in chat.messages">
+            <h4>{{message}}</h4>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </div>
 
 

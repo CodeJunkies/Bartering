@@ -3,7 +3,7 @@
 ##POWERED BY
 
 - AngularJS
-- Yeoman for scaffolding
+- Yeoman
 - Parse.com for storage and REST API
 
 ##PREREQUISITES

@@ -6,12 +6,7 @@ angular.module('barterApp')
 
       getListings: function() {
         // $http returns a promise, which has a then function, which also returns a promise
-        var promise = $http.get('https://api.parse.com/1/classes/Listing', { //test fails if a constant is used...
-          headers: { 
-            'X-Parse-Application-Id': PARSE_COM_CONFIG.APPLICATION_ID_VALUE, 
-            'X-Parse-REST-API-Key': PARSE_COM_CONFIG.REST_API_KEY_VALUE
-          }
-        }).then(function (response) {
+        var promise = $http.get('https://api.parse.com/1/classes/Listing').then(function (response) {
 
           // The return value gets picked up by the then in the controller.
           return response.data;
@@ -23,12 +18,7 @@ angular.module('barterApp')
       
       getListing: function(id) {
 
-        var promise = $http.get(BARTER_APP_CONFIG.LISTING_URL + '/' + id, {
-          headers: { 
-            'X-Parse-Application-Id': PARSE_COM_CONFIG.APPLICATION_ID_VALUE, 
-            'X-Parse-REST-API-Key': PARSE_COM_CONFIG.REST_API_KEY_VALUE
-          }
-        }).then(function (response) {
+        var promise = $http.get(BARTER_APP_CONFIG.LISTING_URL + '/' + id).then(function (response) {
           return response.data;
         });
       
@@ -39,13 +29,7 @@ angular.module('barterApp')
 
         var listingObject = {'userId': userId, 'title': title, 'description': description};
 
-        var promise = $http.post(BARTER_APP_CONFIG.LISTING_URL, listingObject, {
-          headers: { 
-            'X-Parse-Application-Id': PARSE_COM_CONFIG.APPLICATION_ID_VALUE, 
-            'X-Parse-REST-API-Key': PARSE_COM_CONFIG.REST_API_KEY_VALUE,
-            'Content-Type': 'application/json'
-          }
-        }).then(function (response) {
+        var promise = $http.post(BARTER_APP_CONFIG.LISTING_URL, listingObject).then(function (response) {
           return response.data;
         });
       
