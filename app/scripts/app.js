@@ -13,10 +13,6 @@ angular.module('barterApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/signup', {
-        templateUrl: 'views/signup1.html',
-        controller: 'SignUpCtrl'
-      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'

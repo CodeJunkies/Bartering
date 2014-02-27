@@ -23,7 +23,7 @@ angular.module('barterApp')
         });
       
         return promise;
-      }
+      },
       
       saveChat: function(userAId, userBId, messages) {
 

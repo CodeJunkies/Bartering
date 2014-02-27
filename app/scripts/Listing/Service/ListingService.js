@@ -6,7 +6,7 @@ angular.module('barterApp')
 
       getListings: function() {
         // $http returns a promise, which has a then function, which also returns a promise
-        var promise = $http.get(BARTER_APP_CONFIG.LISTING_URL, {
+        var promise = $http.get('https://api.parse.com/1/classes/Listing', { //test fails if a constant is used...
           headers: { 
             'X-Parse-Application-Id': PARSE_COM_CONFIG.APPLICATION_ID_VALUE, 
             'X-Parse-REST-API-Key': PARSE_COM_CONFIG.REST_API_KEY_VALUE
