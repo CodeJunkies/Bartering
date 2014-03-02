@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('barterApp')
-  .factory('ChatService', function($resource) {
+  .factory('ChatService', function($resource, CHAT_URL) {
     return $resource(
-      'https://api.parse.com/1/classes/Chat/:Id', 
+      CHAT_URL + '/:Id', 
       {Id: "@objectId"}, 
       {"update": {method: "PUT"}, "query": {method: "GET", isArray: false}}
     );

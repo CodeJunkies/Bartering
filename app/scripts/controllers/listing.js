@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 angular.module('barterApp')
   .controller('ListingCtrl', function($scope, ListingService) {

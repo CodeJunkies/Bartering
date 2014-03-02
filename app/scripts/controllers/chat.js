@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
 angular.module('barterApp')
-  .controller('ChatCtrl', function($scope, $http, ChatService) {
+  .controller('ChatCtrl', function($scope, ChatService) {
     
     var chats = ChatService.query(function() {
       $scope.chats = chats.results;
