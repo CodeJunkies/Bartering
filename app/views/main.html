@@ -1,4 +1,5 @@
-<div ng-controller="ListingCtrl">
+<div ng-controller="ListingCtrl" class="col-md-6">
+  Recent Listings:
   <ul>
     <li ng-repeat="listing in listings">
       <h4>{{listing.title}}</h4>
@@ -6,7 +7,8 @@
   </ul>
 </div>
 
-<div ng-controller="ChatCtrl">
+<div ng-controller="ChatCtrl" class="col-md-6">
+  Recent Chats:
   <ul>
     <li ng-repeat="chat in chats">
       <h4>{{chat.userAId}} - {{chat.userBId}}</h4>
