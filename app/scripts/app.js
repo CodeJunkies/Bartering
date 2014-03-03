@@ -21,7 +21,14 @@ angular.module('barterApp', [
         templateUrl: 'views/signup.html',
         controller: 'SignupCtrl'
       })
+      .when('/listings', {
+        templateUrl: 'views/listings.html',
+        controller: 'ListingCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .config(function ($httpProvider) {
+    $httpProvider.defaults.useXDomain = true;
   });

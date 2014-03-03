@@ -1,23 +1,21 @@
-<div ng-controller="MainCtrl">
-<div class="container">
-  <h1 ng-show="posts.length">Posts</h1>
-  <table class="table table-striped" ng-show="posts.length">
+<div ng-controller="ListingCtrl">
+  <h1 ng-show="listings.length">Listings</h1>
+  <table class="table table-striped" ng-show="listings.length">
     <thead>
       <th>Title</th>
     </thead>
     <tbody>
-    <tr ng-repeat="post in posts">
-      <td ng-click="activePost(post)">{{post.title}}</td>
-      <td><button class="btn btn-danger" ng-click="delete(post)">Delete</button></td>
+    <tr ng-repeat="listing in listings">
+      <td ng-click="activeListing(listing)">{{listing.title}}</td>
+      <td><button class="btn btn-danger" ng-click="delete(listing)">Delete</button></td>
     </tr>
     </tbody>
   </table>
-  <h3 ng-if="!editing">New Post</h3>
-  <h3 ng-if="editing">Edit Post</h3>
-  <form ng-submit="save(post)">
-    <input ng-model="post.title">
+  <h3 ng-if="!editing">New Listing</h3>
+  <h3 ng-if="editing">Edit Listing</h3>
+  <form ng-submit="save(listing)">
+    <input ng-model="listing.title">
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
-    <button ng-if="editing" class="btn btn-success" ng-click="newPost()">New Post</button>
-</div>
+    <button ng-if="editing" class="btn btn-success" ng-click="newListing()">New Listing</button>
 </div>
