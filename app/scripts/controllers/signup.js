@@ -7,4 +7,8 @@ angular.module('barterApp')
       'AngularJS',
       'Karma'
     ];
+
+    $scope.submit = function() {
+    	
+    }
   });

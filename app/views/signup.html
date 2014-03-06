@@ -1,25 +1,30 @@
-    <div class="container">
-          <form class="form-signin" id="signupform" role="form">
-        <h2 class="form-signin-heading">Create your Bartering Account</h2>
-             <fieldset>
-                    <legend>Bartering Sign Up</legend>
-    
-                    <p><label for="username">Create a Username: <input type="text" name="username" id="username" class="form-control"    required autofocus></label>
-                    <p><label for="password">Password: <input type="password" class="form-control" required>
-                   <p><label for="confirmpassword">Confirm Password: <input type="password" class="form-control" required>
-                    
-                   <p> <label for="email">Email: <input id="email" class="form-control" type="email" name="customeremail" required size="50"></label></p>
-                    
-
-                    <p><label for="city">City: <input type="text" class="form-control" name="street" id="city" required size="40"></label></p>
-
-                    <p><label for="state">State: <input type="text" class="form-control" name="state" id="state" required></label>
-
-                    <label for="zip">Zip Code: <input type="text" name="zip" id="zip" class="form-control" required></label></p>
-				</fieldset>
-         <button class="btn btn-lg btn-primary btn-block" type="submit">Continue<br>
-</button>
-
-					</form>
-
-        </div> <!-- /container -->
+<div class="container" ng-controller="SignupCtrl">
+  <form class="form-signin" id="signupform" role="form">
+    <h2 class="form-signin-heading">Create your Bartering Account</h2>
+    <fieldset>
+      <legend>Bartering Sign Up</legend>
+      <p><label for="username">Create a Username: 
+        <input type="text" name="username" id="username" class="form-control" ng-model="user.username" required autofocus>
+      </label></p>
+      <p><label for="password">Password: 
+        <input type="password" class="form-control" ng-model="user.password" required>
+      </label></p>
+      <p><label for="confirmpassword">Confirm Password: 
+        <input type="password" class="form-control" ng-model="user.confirmpassword" required>
+      </label></p>
+      <p><label for="email">Email: 
+        <input id="email" class="form-control" type="email" name="customeremail" ng-model="user.email" required size="50">
+      </label></p>
+      <p><label for="city">City: 
+        <input type="text" class="form-control" name="street" id="city" ng-model="user.city" required size="40">
+      </label></p>
+      <p><label for="state">State: 
+        <input type="text" class="form-control" name="state" id="state" ng-model="user.state" required>
+      </label>
+      <label for="zip">Zip Code: 
+        <input type="text" name="zip" id="zip" class="form-control" ng-model="user.zipcode" required>
+      </label></p>
+		</fieldset>
+    <button class="btn btn-lg btn-primary btn-block" ng-click="submit">Continue</button>
+  </form>
+</div>
