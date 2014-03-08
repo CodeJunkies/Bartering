@@ -1,0 +1,15 @@
+<div class="container" ng-controller="LoginCtrl">
+  <form class="form-login" id="loginform" role="form">
+    <h2 class="form-login-heading">Log in to your Bartering Account</h2>
+    <fieldset>
+      <legend>Bartering Log In</legend>
+      <p><label for="username">Enter your Username: 
+        <input type="text" name="username" id="username" class="form-control" ng-model="user.username" required autofocus>
+      </label></p>
+      <p><label for="password">Password: 
+        <input type="password" class="form-control" ng-model="user.password" required>
+      </label></p>
+		</fieldset>
+    <button class="btn btn-lg btn-primary btn-block" ng-click="submit(user)">Log In</button>
+  </form>
+</div>

@@ -25,6 +25,10 @@ angular.module('barterApp', [
         templateUrl: 'views/listings.html',
         controller: 'ListingCtrl'
       })
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
